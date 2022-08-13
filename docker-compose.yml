@@ -3,12 +3,11 @@ version: '3.7'
 services:
   db:
     image: postgres:12-alpine
-    restart: always
     volumes:
       - c:/data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: postgresDB
-      POSTGRES_USER: postgres123
-      POSTGRES_PASSWORD: qazwsxedc123
+     - POSTGRES_DB=app
+     - POSTGRES_USER=postgresdb
+     - POSTGRES_PASSWORD=4idFi3dos3kjs92eD
     ports:
       - 5432:5432
